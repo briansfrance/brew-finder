@@ -1,0 +1,32 @@
+<%- include('partials/header.ejs') %>
+<div class="mainContainer">
+  <h1>Frind Breweries In Your City</h1>
+  <form action="/" method="POST" class="getRecipeForm">
+    <label for="city">City:</label>
+    <input class="searchFields" type="text" name="city" id="city" />
+    <label for="city">State:</label>
+    <input class="searchFields" type="text" name="state" id="state" />
+    <input type="submit" value="Get Breweries" class="getRecipe" />
+  </form>
+  <% if(locals.breweries) { %>
+  <h2>List of Breweries in your search: <%= breweries.length %> found.</h2>
+  <% if(breweries.length !== 0) { %>
+  <div class="brewList">
+    <ul>
+      <% breweries.forEach(brewery => { %>
+      <li>
+        <strong> <%= brewery.name %></strong> <br />
+        <%= brewery.address_1 %> <%= brewery.address_2 %> <%= brewery.city %>,
+        <%= brewery.state %> <%= brewery.postal_code %> <br />
+        <a class="breweryLink" href="<%= brewery.website_url %>" target="_blank"
+          >Visit Their Website</a
+        >
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+  <% } else { %>
+  <p><strong>Sorry there are no breweries in this location.</strong></p>
+  <% } } %>
+</div>
+<%- include('partials/footer.ejs') %>

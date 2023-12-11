@@ -1,0 +1,99 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: white;
+    padding: 10px;
+}
+
+.brewLogo {
+    height: 50px;
+}
+
+body{
+    background-image: url('/images/pexels-alex-knight-2599245.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 0px);
+    color: #4e1838;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.mainContainer {
+    background-color: #ffffffe3;
+    width: 740px;
+    max-width: 90%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 40px 10px;
+}
+
+h1, h2 {
+    color: #550032;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+.getRecipeForm {
+    display: grid;
+    width: 100%;
+    padding: 20px 60px;
+}
+
+.searchFields {
+    border: 1px solid #540133;
+    height: 42px;
+    border-radius: 10px;
+}
+
+.getRecipe {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    color: white;
+    background-color: #550032;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+.brewList {
+    height: 220px;
+    overflow: scroll;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+    border: 1px solid purple;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+ul {
+    line-height: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    color: white;
+    background-color: purple;
+    padding: 10px 30px;
+}
